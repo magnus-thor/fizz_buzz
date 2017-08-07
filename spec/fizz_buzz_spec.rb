@@ -29,7 +29,7 @@ it "returns 'it is a negative number' if it is a negative number" do
 end
 
 it "returns 'it is a float number' if it is a float" do
-  expect(fizz_buzz(4.12)).to eq 'its a float number'
+  expect(fizz_buzz(4.12)).to eq 'it is a float number'
 end
 
 end
