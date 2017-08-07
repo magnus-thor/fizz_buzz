@@ -2,23 +2,31 @@
 
 def fizz_buzz(number)
   if (number.is_a? Integer) && number > 0
-    if number % 15 == 0
-    'fizz buzz'
-    elsif number % 5 == 0
-    'buzz'
-    elsif number % 3 == 0
-    'fizz'
+    if remainder(number, 15)
+      'fizz buzz'
+    elsif remainder(number, 5)
+      'buzz'
+    elsif remainder(number,3)
+      'fizz'
     else
-    number
+      number
     end
   else
-    case number
-    when Float
-      'it is a float number'
-    when String
-      'it is a string'
-    else
-      'it is a negative number'
-    end
+    sad_path(number)
   end
+end
+
+def sad_path(number)
+  case number
+  when Float
+    'it is a float number'
+  when String
+    'it is a string'
+  else
+    'it is a negative number'
+  end
+end
+
+def remainder(number, divider)
+  number % divider == 0
 end
